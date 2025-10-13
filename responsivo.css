@@ -39,6 +39,7 @@
     section.inscricoes h1 {
         padding-bottom: 20px;
         font-size: 1.7rem;
+        color: blue;
     }
 
     .inscricoes > .interface {
