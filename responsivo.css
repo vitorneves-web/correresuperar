@@ -1,4 +1,4 @@
-/* ===== RESPONSIVO GERAL CORRIGIDO ===== */
+/* ===== RESPONSIVO GERAL OTIMIZADO ===== */
 @media (max-width: 1000px) {
 
     /* Evitar overflow horizontal */
@@ -6,28 +6,23 @@
         overflow-x: hidden;
     }
 
+    /* Interface geral */
     .interface {
-    max-width: 1380px;
-    padding: 0;
-    margin: 0 auto;
-}
+        max-width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
 
     /* Header */
     .menu-desktop { display: none; }
     .btn-menu-mobile { display: block; }
     header .logotipo-cabecalho img { max-width: 60px; }
 
-    /* Ajustar padding do main por causa do header fixo */
-    main { padding-top: 100px; }
+    main { padding-top: 100px; } /* ajustar header fixo */
 
     /* Inscrições */
     section.inscricoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px 0;
-    padding-top: 144px;
+        padding: 20px 10px;
     }
 
     section.inscricoes h1 {
@@ -35,21 +30,29 @@
         text-align: center;
         padding-bottom: 15px;
     }
+
     .inscricoes > .interface {
         max-width: 100%;
-        padding: 20px 0px;
+        padding: 20px 10px;
     }
+
     #form-checkout input {
         font-size: 14px;
         padding: 8px;
     }
+
     #form-checkout button {
         font-size: 1rem;
         padding: 10px;
     }
 
     /* Pix Box */
-    #pixBox img { width: 150px; max-width: 100%; }
+    #pixBox img {
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+    }
+
     .text-box { font-size: 14px; padding: 8px; }
     #copiarPixBtn, #confirmarBtn { font-size: 1rem; padding: 10px; }
 
@@ -61,26 +64,22 @@
         max-width: 100%;
         width: 100%;
     }
+
     .sobre-nos p, .sobre-nos .sobre-nos-txt {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         text-align: justify;
-        padding: 0px;
+        padding: 0 5px;
     }
 
-    .sobre-nos #txt1, .sobre-nos #txt2, .sobre-nos #txt3,.sobre-nos #img1, .sobre-nos #img2, .sobre-nos #img3 {
-      max-width: 350px;
-    }
-    
     .sobre-nos > .interface img {
-        max-width: 350px;
+        max-width: 100%;
         height: auto;
     }
 
     .sobre-nos .sobre-nos-txt {
-        max-width: 350px;
-        padding: 0 0 60px 0;
+        max-width: 100%;
+        padding-bottom: 20px;
     }
-
 
     /* Contato */
     .contato > .interface {
@@ -89,7 +88,11 @@
         text-align: center;
         gap: 20px;
     }
-    .btn-grupo button { width: 100%; max-width: 300px; }
+
+    .btn-grupo button {
+        width: 100%;
+        max-width: 300px;
+    }
 
     /* Footer */
     footer > .interface {
@@ -98,29 +101,45 @@
         text-align: center;
         gap: 20px;
     }
-    footer .logo-footer img { max-width: 80px; }
-    footer .btn-redes { gap: 16px; justify-content: center; }
-    footer .btn-redes button { width: 50px; height: 50px; font-size: 20px; }
+
+    footer .logo-footer img {
+        max-width: 70px;
+    }
+
+    footer .btn-redes {
+        gap: 16px;
+        justify-content: center;
+    }
+
+    footer .btn-redes button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
     footer p { font-size: 0.85rem; }
 
     /* Calendário */
     .meses { padding: 20px 10px; }
-    .mes h1 { font-size: 2rem; margin-bottom: 20px; }
+    .mes h1 { font-size: 1.8rem; margin-bottom: 15px; }
     .dias { border: none; justify-content: center; }
+    
     .dia, .data {
-        width: calc((100% - 2px) / 7); /* subtraído para evitar overflow por borders */
-        font-size: 0.9rem;
-        padding: 8px 0;
+        width: calc((100% - 2px) / 7); /* evita overflow por borders */
+        font-size: 0.85rem;
+        padding: 6px 0;
         box-sizing: border-box;
     }
+
     #treinao { font-weight: 700; }
     .descricao {
-        font-size: 0.95rem;
-        line-height: 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
         text-align: center;
-        padding: 20px 10px;
+        padding: 15px 10px;
         word-break: break-word;
     }
+
     .descricao a {
         display: inline-block;
         margin-top: 6px;
