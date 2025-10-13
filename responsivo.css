@@ -61,8 +61,13 @@
         text-align: justify;
         padding: 0 10px;
     }
+
+    .sobre-nos p {
+      max-width: 400px;
+    }
+    
     .sobre-nos > .interface img {
-        max-width: 400%;
+        max-width: 400px;
         height: auto;
     }
 
