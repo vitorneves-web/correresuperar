@@ -22,8 +22,14 @@
 
     /* Inscrições */
     section.inscricoes {
-        padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    padding-top: 144px;
     }
+
     section.inscricoes h1 {
         font-size: 1.8rem;
         text-align: center;
@@ -31,8 +37,7 @@
     }
     .inscricoes > .interface {
         max-width: 100%;
-        padding: 20px;
-        width: calc(100% - 20px); /* evita ultrapassar tela */
+        padding: 20px 0px;
     }
     #form-checkout input {
         font-size: 14px;
@@ -59,10 +64,10 @@
     .sobre-nos p, .sobre-nos .sobre-nos-txt {
         font-size: 0.95rem;
         text-align: justify;
-        padding: 0 10px;
+        padding: 0px;
     }
 
-    .sobre-nos p {
+    .sobre-nos #txt1, .sobre-nos #txt2, .sobre-nos #txt3,.sobre-nos #img1, .sobre-nos #img2, .sobre-nos #img3 {
       max-width: 400px;
     }
     
