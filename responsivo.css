@@ -1,87 +1,25 @@
-/* ==============================
-   📱 RESPONSIVIDADE GERAL
-   ============================== */
+@media (max-width: 1000px){
 
-/* Tablets e celulares grandes */
-@media (max-width: 1024px) {
-
-<<<<<<< HEAD
-  header nav.menu-desktop ul {
-    gap: 30px;
-  }
-
-  .sobre-nos > .interface {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-=======
+    /* Estilo do Menu */
     header {
         background-image: none;
         background-color: var(--corCinzaEscuro);
     }
->>>>>>> 0fedbb1 (Atualizando site com responsivo e menu mobile)
 
-  .sobre-nos p {
-    max-width: 100%;
-    padding: 10px 0;
-  }
+    .menu-desktop{
+        display: none;
+    }
 
-<<<<<<< HEAD
-  .sobre-nos img {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-
-  .contato > .interface {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  footer > .interface {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-  }
-
-  footer .btn-redes button {
-    margin: 5px;
-  }
-}
-
-/* Celulares */
-@media (max-width: 768px) {
-
-  h1, h2, h3 {
-    font-size: 1.8rem;
-  }
-
-  header nav.menu-desktop ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  header .logotipo-cabecalho img {
-    max-width: 55px;
-  }
-
-  section.inscricoes {
-    padding-top: 120px;
-  }
-=======
     .btn-menu-mobile {
         display: block;
     }
 
     /* Estilo do Inscrições */
-
     section.inscricoes h1 {
         font-size: 2rem;
     }
 
     /* Estilo do Pagamentos */
-
     section.pixbox h3 {
         font-size: 2rem;
     }
@@ -96,6 +34,10 @@
         box-shadow: 0px 4px 12px 0px #202020;
     }
 
+    #pixBox {
+        display: block; /* Mudar conforme necessário */
+    }
+
     .text-box {
         margin: 15px;
         font-size: 1rem;
@@ -105,8 +47,7 @@
         margin: 0px 50px;
     }
 
-    /* Estilo do Sobre nós*/
-
+    /* Estilo do Sobre nós */
     .sobre-nos .sobre-nos-txt {
         max-width: 380px;
         padding: 0 0 60px 0;
@@ -125,7 +66,6 @@
     }
 
     /* Estilo do Footer */
-    
     footer {
         padding: 30px 0;
         background-color: var(--corCinzaEscuro);
@@ -173,65 +113,5 @@
         font-size: 0.9rem;
         color: var(--corCinza);
     }
->>>>>>> 0fedbb1 (Atualizando site com responsivo e menu mobile)
 
-  .inscricoes > .interface,
-  .container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  #form-checkout input {
-    font-size: 15px;
-  }
-
-  #pixBox img {
-    width: 160px;
-  }
-
-  .text-box {
-    font-size: 14px;
-    word-wrap: break-word;
-  }
-
-  .sobre-nos .sobre-nos-txt {
-    padding: 0 10px 40px 10px;
-  }
-
-  .btn-grupo button {
-    width: 220px;
-    height: 50px;
-  }
-
-  footer .btn-redes button {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-  }
-}
-
-/* Telas muito pequenas (até 480px) */
-@media (max-width: 480px) {
-  h1, h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  #form-checkout button,
-  #copiarPixBtn,
-  #confirmarBtn {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .text-box {
-    font-size: 13px;
-  }
-
-  .sobre-nos img {
-    width: 100%;
-  }
-
-  footer p {
-    font-size: 0.9rem;
-  }
 }
