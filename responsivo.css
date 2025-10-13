@@ -1,78 +1,124 @@
-@media (max-width: 1000px){
+/* ==============================
+   📱 RESPONSIVIDADE GERAL
+   ============================== */
 
-    /* Estilo do Menu */
+/* Tablets e celulares grandes */
+@media (max-width: 1024px) {
 
-    header {
-        background-image: none;
-        background-color: var(--corCinzaMedio);
+  header nav.menu-desktop ul {
+    gap: 30px;
+  }
 
-    }
+  .sobre-nos > .interface {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    .menu-desktop{
-        display: none;
-    }
+  .sobre-nos p {
+    max-width: 100%;
+    padding: 10px 0;
+  }
 
-    /* Estilo do Inscrições */
+  .sobre-nos img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-    section.inscricoes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 40px 20px;
-        padding-top: 144px;
-    }
+  .contato > .interface {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    section.inscricoes h1 {
-        padding-bottom: 20px;
-        font-size: 2.2rem;
-    }
+  footer > .interface {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
 
-    .inscricoes > .interface {
-        max-width: 500px;
-        width: 100%;
-        background: var(--corCinzaClaro);
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0px 4px 12px 0px #202020;
-    }
+  footer .btn-redes button {
+    margin: 5px;
+  }
+}
 
-    #form-checkout {
-        display: flex;
-        flex-direction: column; /* coloca label e input em coluna */
-        gap: 15px; /* espaçamento entre os blocos */
-    }
+/* Celulares */
+@media (max-width: 768px) {
 
-    #form-checkout label {
-        color: var(--corCinza);
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
+  h1, h2, h3 {
+    font-size: 1.8rem;
+  }
 
-    #form-checkout input {
-        color: var(--corCinzaEscuro);
-        background-color: var(--corBranca);
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 16px;
-    }
+  header nav.menu-desktop ul {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    #form-checkout button {
-        background-color: var(--corCinzaMedio);
-        margin-top: 20px;
-        padding: 12px;
-        font-size: 1.1rem;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: .5s;
-        color: var(--corBranca);
-        border: 1px solid var(--corCinzaClaro);
-    }
+  header .logotipo-cabecalho img {
+    max-width: 55px;
+  }
 
-    #form-checkout button:hover {
-        background-color: var(--corCinzaEscuro);
-        color: var(--corLaranja);
-    }
+  section.inscricoes {
+    padding-top: 120px;
+  }
 
+  .inscricoes > .interface,
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #form-checkout input {
+    font-size: 15px;
+  }
+
+  #pixBox img {
+    width: 160px;
+  }
+
+  .text-box {
+    font-size: 14px;
+    word-wrap: break-word;
+  }
+
+  .sobre-nos .sobre-nos-txt {
+    padding: 0 10px 40px 10px;
+  }
+
+  .btn-grupo button {
+    width: 220px;
+    height: 50px;
+  }
+
+  footer .btn-redes button {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
+/* Telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  #form-checkout button,
+  #copiarPixBtn,
+  #confirmarBtn {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .text-box {
+    font-size: 13px;
+  }
+
+  .sobre-nos img {
+    width: 100%;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
 }
