@@ -1,6 +1,15 @@
 @media (max-width: 1000px){
 
+  /* Estilo Geral */
+
+  .interface {
+    max-width: 1380px;
+    padding: 0 4%;
+    margin: 0 auto;
+  }
+  
     /* Estilo do Menu */
+
     header {
         background-image: none;
         background-color: var(--corCinzaEscuro);
@@ -15,19 +24,25 @@
     }
 
     /* Estilo do Inscrições */
+
+    section.inscricoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 380px;
+        margin: auto;
+        padding: 40px 0px;
+        padding-top: 144px;
+    }
+
     section.inscricoes h1 {
-        font-size: 2rem;
+        padding-bottom: 20px;
+        font-size: 1.7rem;
     }
 
-    /* Estilo do Pagamentos */
-    section.pixbox h3 {
-        font-size: 2rem;
-        padding: 10px;
-    }
-
-    .container {
-        margin: 18px auto;
-        max-width: 440px;
+    .inscricoes > .interface {
+        max-width: 500px;
         width: 100%;
         background: var(--corCinzaClaro);
         padding: 30px;
@@ -35,13 +50,127 @@
         box-shadow: 0px 4px 12px 0px #202020;
     }
 
+    #form-checkout {
+        display: flex;
+        flex-direction: column; /* coloca label e input em coluna */
+        gap: 15px; /* espaçamento entre os blocos */
+    }
+
+    #form-checkout label {
+        color: var(--corCinza);
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #form-checkout input {
+        color: var(--corCinzaEscuro);
+        background-color: var(--corBranca);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    #form-checkout button {
+        background-color: var(--corCinzaMedio);
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .5s;
+        color: var(--corBranca);
+        border: 1px solid var(--corCinzaClaro);
+    }
+
+    #form-checkout button:hover {
+        background-color: var(--corCinzaEscuro);
+        color: var(--corLaranja);
+    }
+
+    /* Estilo dos Pagamentos */
+
+    section.pixBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        max-width: 380px;
+    }
+
+    section.pixBox h3 {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        margin: 18px auto;
+        max-width: 500px;
+        width: 100%;
+        background: var(--corCinzaClaro);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px 0px #202020;
+    }
+
+    #pixBox {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #pixBox img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
     .text-box {
-        margin: 15px;
-        font-size: 1rem;
+        color: var(--corCinzaEscuro);
+        background-color: var(--corBranca);
+        margin: 15px auto 15px auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        overflow-wrap: break-word;
+    }
+
+    #copiarPixBtn {
+        background-color: var(--corCinzaMedio);
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .5s;
+        color: var(--corBranca);
+        border: 2px solid var(--corCinzaClaro);
+    }
+
+    #copiarPixBtn:hover {
+        background-color: var(--corCinzaEscuro);
+        color: var(--corLaranja);
+    }
+
+    #confirmarBtn {
+        background-color: var(--corCinzaMedio);
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .5s;
+        color: var(--corBranca);
+        border: 1px solid var(--corBranca);
     }
 
     .pag_efetuado p {
-        margin: 0px 50px;
+        color: var(--corLaranja);
+        font-weight: bold;
+    }
+
+    #confirmarBtn:hover {
+        background-color: var(--corCinzaEscuro);
+        color: var(--corLaranja);
     }
 
     /* Estilo do Sobre nós */
@@ -61,6 +190,33 @@
         "txt3"
         "img3";
     }
+
+    /* Estilo do Sobre nós */
+
+    .sobre-nos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sobre-nos .sobre-nos-txt {
+        max-width: 380px;
+        padding: 0 0 60px 0;
+    }
+
+    .sobre-nos p {
+        text-align: justify;
+        line-height: 1.6;
+        max-width: 380px;
+        text-indent: 2rem;
+        padding-top: 24px;
+    }
+
+    .sobre-nos > .interface img {
+        max-width: 380px;
+    }
+
 
     /* Estilo do Footer */
     footer {

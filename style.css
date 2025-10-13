@@ -221,16 +221,14 @@ section.inscricoes h1 {
 
 /* Estilo dos Pagamentos */
 
-section.pixbox {
+section.pixBox {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px 20px;
-    padding-top: 144px;
 }
 
-section.pixbox h3 {
+section.pixBox h3 {
     padding-bottom: 20px;
     font-size: 2.2rem;
 }
