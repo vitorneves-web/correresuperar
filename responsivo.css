@@ -20,8 +20,9 @@
     }
 
     /* Estilo do Pagamentos */
-    section.pixbox h3 {
+    section.pixBox h3 {
         font-size: 2rem;
+        padding: 10px;
     }
 
     .container {
@@ -32,10 +33,6 @@
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0px 4px 12px 0px #202020;
-    }
-
-    #pixBox {
-        display: block; /* Mudar conforme necessário */
     }
 
     .text-box {
