@@ -1,114 +1,79 @@
-@media (max-width: 1000px){
+/* ===== RESPONSIVO GERAL ===== */
+@media (max-width: 1000px) {
+    /* Header */
+    .menu-desktop { display: none; }
+    .btn-menu-mobile { display: block; }
+    header .logotipo-cabecalho img { max-width: 60px; }
 
-    /* Estilo do Menu */
-    header {
-        background-image: none;
-        background-color: var(--corCinzaEscuro);
+    /* Ajustar padding do main por causa do header fixo */
+    main { padding-top: 100px; }
+
+    /* Inscrições */
+    section.inscricoes {
+        padding: 20px 10px;
     }
-
-    .menu-desktop{
-        display: none;
-    }
-
-    .btn-menu-mobile {
-        display: block;
-    }
-
-    /* Estilo do Inscrições */
     section.inscricoes h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        text-align: center;
+        padding-bottom: 15px;
     }
-
-    /* Estilo do Pagamentos */
-    section.pixBox h3 {
-        font-size: 2rem;
+    .inscricoes > .interface {
+        max-width: 100%;
+        padding: 20px;
+    }
+    #form-checkout input {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #form-checkout button {
+        font-size: 1rem;
         padding: 10px;
     }
 
-    .container {
-        margin: 18px auto;
-        max-width: 440px;
-        width: 100%;
-        background: var(--corCinzaClaro);
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0px 4px 12px 0px #202020;
-    }
+    /* Pix Box */
+    #pixBox img { width: 150px; }
+    .text-box { font-size: 14px; padding: 8px; }
+    #copiarPixBtn, #confirmarBtn { font-size: 1rem; padding: 10px; }
 
-    .text-box {
-        margin: 15px;
-        font-size: 1rem;
-    }
-
-    .pag_efetuado p {
-        margin: 0px 50px;
-    }
-
-    /* Estilo do Sobre nós */
-    .sobre-nos .sobre-nos-txt {
-        max-width: 380px;
-        padding: 0 0 60px 0;
-    }
-
+    /* Sobre nós */
     .sobre-nos > .interface {
-        max-width: 970px;
-        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
-        grid-template-areas:
-        "txt1"
-        "img1"
-        "txt2"
-        "img2"
-        "txt3"
-        "img3";
-    }
-
-    /* Estilo do Footer */
-    footer {
-        padding: 30px 0;
-        background-color: var(--corCinzaEscuro);
-    }
-
-    footer > .interface {
         display: flex;
-        flex-direction: column; /* empilha o conteúdo */
+        flex-direction: column;
+        grid-template-areas: none;
+        gap: 20px;
+        max-width: 100%;
+    }
+    .sobre-nos p, .sobre-nos .sobre-nos-txt { font-size: 0.95rem; text-align: justify; padding: 0 10px; }
+    .sobre-nos > .interface img { max-width: 100%; height: auto; }
+
+    /* Contato */
+    .contato > .interface {
+        flex-direction: column;
         align-items: center;
         text-align: center;
-        color: var(--corBranca);
-        gap: 20px; /* espaçamento entre elementos */
+        gap: 20px;
     }
+    .btn-grupo button { width: 100%; max-width: 300px; }
 
-    footer .logo-footer img {
-        max-width: 80px;
-        border-radius: 50%;
-        margin-bottom: 8px;
+    /* Footer */
+    footer > .interface {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
+    footer .logo-footer img { max-width: 80px; }
+    footer .btn-redes { gap: 16px; justify-content: center; }
+    footer .btn-redes button { width: 50px; height: 50px; font-size: 20px; }
+    footer p { font-size: 0.85rem; }
 
-    footer .btn-redes {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-    }
-
-    footer .btn-redes button {
-        width: 52px;
-        height: 52px;
-        font-size: 22px;
-        margin: 0;
-        border-radius: 50%;
-        border: 1px solid var(--corCinzaClaro);
-        background-color: var(--corCinzaMedio);
-        transition: .3s;
-    }
-
-    footer .btn-redes button:hover {
-        background-color: var(--corCinzaEscuro);
-        color: var(--corLaranja);
-        transform: scale(1.05);
-    }
-
-    footer p {
-        font-size: 0.9rem;
-        color: var(--corCinza);
-    }
-
+    /* Calendário (manter ajustes que você já tinha) */
+    .meses { padding: 20px 10px; }
+    .mes h1 { font-size: 2rem; margin-bottom: 20px; }
+    .dias { border: none; justify-content: center; }
+    .dia { width: calc(100% / 7); font-size: 0.9rem; padding: 8px 0; }
+    .data { width: calc(100% / 7); font-size: 0.9rem; padding: 22px 0; }
+    #treinao { font-weight: 700; }
+    .descricao { font-size: 0.95rem; line-height: 1.5rem; text-align: center; padding: 20px 10px; }
+    .descricao a { display: inline-block; margin-top: 6px; color: var(--corBranca); text-decoration: underline; }
 }
