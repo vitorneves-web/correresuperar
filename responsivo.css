@@ -1,0 +1,78 @@
+@media (max-width: 1000px){
+
+    /* Estilo do Menu */
+
+    header {
+        background-image: none;
+        background-color: var(--corCinzaMedio);
+
+    }
+
+    .menu-desktop{
+        display: none;
+    }
+
+    /* Estilo do Inscrições */
+
+    section.inscricoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 20px;
+        padding-top: 144px;
+    }
+
+    section.inscricoes h1 {
+        padding-bottom: 20px;
+        font-size: 2.2rem;
+    }
+
+    .inscricoes > .interface {
+        max-width: 500px;
+        width: 100%;
+        background: var(--corCinzaClaro);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px 0px #202020;
+    }
+
+    #form-checkout {
+        display: flex;
+        flex-direction: column; /* coloca label e input em coluna */
+        gap: 15px; /* espaçamento entre os blocos */
+    }
+
+    #form-checkout label {
+        color: var(--corCinza);
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #form-checkout input {
+        color: var(--corCinzaEscuro);
+        background-color: var(--corBranca);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    #form-checkout button {
+        background-color: var(--corCinzaMedio);
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .5s;
+        color: var(--corBranca);
+        border: 1px solid var(--corCinzaClaro);
+    }
+
+    #form-checkout button:hover {
+        background-color: var(--corCinzaEscuro);
+        color: var(--corLaranja);
+    }
+
+}
