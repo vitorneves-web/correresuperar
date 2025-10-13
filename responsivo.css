@@ -30,7 +30,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 360px;
+        max-width: 300px;
         margin: auto;
         padding: 40px 0px;
         padding-top: 144px;
@@ -39,11 +39,11 @@
     section.inscricoes h1 {
         padding-bottom: 20px;
         font-size: 1.7rem;
-        color: var(--corLaranja);
+        color: blue;
     }
 
     .inscricoes > .interface {
-        max-width: 500px;
+        max-width: 300px;
         width: 100%;
         background: var(--corCinzaClaro);
         padding: 30px;
@@ -97,7 +97,7 @@
         align-items: center;
         flex-direction: column;
         margin: auto;
-        max-width: 360px;
+        max-width: 300px;
     }
 
     section.pixBox h3 {
@@ -106,7 +106,7 @@
 
     .container {
         margin: 18px auto;
-        max-width: 500px;
+        max-width: 300px;
         width: 100%;
         background: var(--corCinzaClaro);
         padding: 30px;
@@ -176,7 +176,7 @@
 
     /* Estilo do Sobre nós */
     .sobre-nos .sobre-nos-txt {
-        max-width: 360px;
+        max-width: 300px;
         padding: 0 0 60px 0;
     }
 
@@ -202,20 +202,20 @@
     }
 
     .sobre-nos .sobre-nos-txt {
-        max-width: 360px;
+        max-width: 300px;
         padding: 0 0 60px 0;
     }
 
     .sobre-nos p {
         text-align: justify;
         line-height: 1.6;
-        max-width: 360px;
+        max-width: 300px;
         text-indent: 2rem;
         padding-top: 24px;
     }
 
     .sobre-nos > .interface img {
-        max-width: 360px;
+        max-width: 300px;
     }
 
 
