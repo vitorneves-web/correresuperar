@@ -62,9 +62,15 @@
         padding: 0 10px;
     }
     .sobre-nos > .interface img {
-        max-width: 100%;
+        max-width: 400%;
         height: auto;
     }
+
+    .sobre-nos .sobre-nos-txt {
+        max-width: 400px;
+        padding: 0 0 60px 0;
+    }
+
 
     /* Contato */
     .contato > .interface {
