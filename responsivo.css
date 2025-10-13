@@ -5,6 +5,7 @@
 /* Tablets e celulares grandes */
 @media (max-width: 1024px) {
 
+<<<<<<< HEAD
   header nav.menu-desktop ul {
     gap: 30px;
   }
@@ -13,12 +14,19 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
+=======
+    header {
+        background-image: none;
+        background-color: var(--corCinzaEscuro);
+    }
+>>>>>>> 0fedbb1 (Atualizando site com responsivo e menu mobile)
 
   .sobre-nos p {
     max-width: 100%;
     padding: 10px 0;
   }
 
+<<<<<<< HEAD
   .sobre-nos img {
     max-width: 80%;
     margin: 0 auto;
@@ -61,6 +69,111 @@
   section.inscricoes {
     padding-top: 120px;
   }
+=======
+    .btn-menu-mobile {
+        display: block;
+    }
+
+    /* Estilo do Inscrições */
+
+    section.inscricoes h1 {
+        font-size: 2rem;
+    }
+
+    /* Estilo do Pagamentos */
+
+    section.pixbox h3 {
+        font-size: 2rem;
+    }
+
+    .container {
+        margin: 18px auto;
+        max-width: 440px;
+        width: 100%;
+        background: var(--corCinzaClaro);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px 0px #202020;
+    }
+
+    .text-box {
+        margin: 15px;
+        font-size: 1rem;
+    }
+
+    .pag_efetuado p {
+        margin: 0px 50px;
+    }
+
+    /* Estilo do Sobre nós*/
+
+    .sobre-nos .sobre-nos-txt {
+        max-width: 380px;
+        padding: 0 0 60px 0;
+    }
+
+    .sobre-nos > .interface {
+        max-width: 970px;
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+        grid-template-areas:
+        "txt1"
+        "img1"
+        "txt2"
+        "img2"
+        "txt3"
+        "img3";
+    }
+
+    /* Estilo do Footer */
+    
+    footer {
+        padding: 30px 0;
+        background-color: var(--corCinzaEscuro);
+    }
+
+    footer > .interface {
+        display: flex;
+        flex-direction: column; /* empilha o conteúdo */
+        align-items: center;
+        text-align: center;
+        color: var(--corBranca);
+        gap: 20px; /* espaçamento entre elementos */
+    }
+
+    footer .logo-footer img {
+        max-width: 80px;
+        border-radius: 50%;
+        margin-bottom: 8px;
+    }
+
+    footer .btn-redes {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    footer .btn-redes button {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid var(--corCinzaClaro);
+        background-color: var(--corCinzaMedio);
+        transition: .3s;
+    }
+
+    footer .btn-redes button:hover {
+        background-color: var(--corCinzaEscuro);
+        color: var(--corLaranja);
+        transform: scale(1.05);
+    }
+
+    footer p {
+        font-size: 0.9rem;
+        color: var(--corCinza);
+    }
+>>>>>>> 0fedbb1 (Atualizando site com responsivo e menu mobile)
 
   .inscricoes > .interface,
   .container {

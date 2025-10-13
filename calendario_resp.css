@@ -1,0 +1,124 @@
+/* ======== RESPONSIVO - CALENDÁRIO ======== */
+@media (max-width: 1000px) {
+
+    /* Cabeçalho */
+    header {
+        background-color: var(--corCinzaEscuro);
+        padding: 12px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .btn-menu-mobile {
+        display: block;
+    }
+
+    .logotipo-cabecalho img {
+        max-width: 60px;
+    }
+
+    /* Conteúdo principal */
+    main {
+        padding-top: 100px; /* compensar o header fixo */
+    }
+
+    .meses {
+        padding: 40px 20px;
+    }
+
+    .mes h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .dias {
+        border: none;
+        justify-content: center;
+    }
+
+    .dia {
+        width: calc(100% / 7);
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .data {
+        width: calc(100% / 7);
+        font-size: 0.9rem;
+        padding: 22px 0;
+    }
+
+    #treinao {
+        background-color: var(--corLaranja);
+        color: var(--corBranca);
+        font-weight: 700;
+    }
+
+    .descricao {
+        font-size: 0.95rem;
+        line-height: 1.5rem;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .descricao a {
+        display: inline-block;
+        margin-top: 6px;
+        color: var(--corBranca);
+        text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 0;
+        background-color: var(--corCinzaEscuro);
+    }
+
+    footer > .interface {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: var(--corBranca);
+        gap: 20px;
+    }
+
+    footer .logo-footer img {
+        max-width: 80px;
+        border-radius: 50%;
+        margin-bottom: 8px;
+    }
+
+    footer .btn-redes {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    footer .btn-redes button {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid var(--corCinzaClaro);
+        background-color: var(--corCinzaMedio);
+        transition: .3s;
+    }
+
+    footer .btn-redes button:hover {
+        background-color: var(--corCinzaEscuro);
+        color: var(--corLaranja);
+        transform: scale(1.05);
+    }
+
+    footer p {
+        font-size: 0.9rem;
+        color: var(--corCinza);
+    }
+}
