@@ -152,15 +152,15 @@
       telefone: form.telefone.value
     };
 
-    // Enviar via EmailJS
+    // Enviar via EmailJS (sem mostrar alertas)
     emailjs.send("service_v6g4cus", "template_4fq3p6w", dados)
       .then(() => {
-        alert("✅ Dados enviados com sucesso! Realize o pagamento para confirmar sua inscrição.");
+        // nada acontece na tela do cliente
       })
       .catch(() => {
-        alert("⚠️ Falha ao enviar os dados, mas você pode prosseguir com o pagamento.");
+        // também nada acontece se falhar
       });
-  });
+});
 
   // Envio de confirmação via WhatsApp
   confirmarBtn.addEventListener("click", function() {
