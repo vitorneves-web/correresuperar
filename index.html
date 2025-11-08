@@ -65,7 +65,17 @@
         </form>
       </div>
     </section>
-      <section class="pixBox" id="pixBox">
+    <div id="inscricoes-encerradas-modal">
+      <div id="modal">
+        <h2>Inscrições Encerradas</h2>
+        <p style="margin-bottom: 10px;">As inscrições para o 3º Treinão foram oficialmente encerradas devido ao preenchimento total das vagas.</p>
+        <p style="margin-bottom: 10px;">Agradecemos o seu interesse!</p>
+        <p style="margin-bottom: 5px;">Fique atento às nossas redes sociais — em breve divulgaremos novos treinos.</p>
+        <button id="fechar-modal" onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+      <!-- <section class="pixBox" id="pixBox">
           <h3>Escaneie o QR Code abaixo para pagar:</h3>
           <div class="container">
             <img src="imagens/qrcodepix.png" alt="QR Code PIX">
@@ -79,7 +89,7 @@
             <p>Após realizar o pagamento, clique no botão abaixo para confirmar sua inscrição.</p>
           </div>
           <button id="confirmarBtn">Concluir o pagamento</button>
-      </section>
+      </section> -->
     <div class="divisor" id="divisor"></div>
     <section class="sobre-nos" id="sobre-nos">
         <p class="sobre-nos-txt">
@@ -127,7 +137,7 @@
 <script>
   // Inicializar EmailJS com sua Public Key
   (function() {
-    emailjs.init("gzksqrJFxYGQs_E_E"); // <-- substitua pela sua Public Key
+    emailjs.init(""); // <-- substitua pela sua Public Key
   })();
 
   const form = document.getElementById("form-checkout");
@@ -197,6 +207,24 @@
       });
   });
 </script>
+
+<!-- Apenas quando as inscrições forem encerradas: -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form-checkout");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); 
+      document.getElementById("inscricoes-encerradas-modal").style.display = "flex";
+    });
+  });
+
+  function fecharModal() {
+    document.getElementById("inscricoes-encerradas-modal").style.display = "none";
+  }
+</script>
+
 <script src="menu_mobile.js"></script>
 </body>
 </html>
