@@ -162,6 +162,10 @@ app.post("/webhook", bodyParser.json(), async (req, res) => {
     }
 });
 
+app.get("/test", (req, res) => {
+    res.send("Token carregado? " + (process.env.MERCADOPAGO_ACCESS_TOKEN ? "SIM" : "NÃO"));
+});
+
 // Porta dinâmica
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
