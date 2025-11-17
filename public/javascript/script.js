@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     result.innerHTML = "<p>Gerando QR Code PIX...</p>";
 
     try {
-      const response = await fetch("https://www.correresuperar.com.br/process_payment", {
+      const response = await fetch("https://correresuperar.onrender.com/process_payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
