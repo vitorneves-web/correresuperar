@@ -23,81 +23,6 @@
       display: block;
   }
 
-  /* Inscrições */
-  section.inscricoes {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      max-width: 500px;
-      margin: auto;
-      padding: 40px 0;
-      padding-top: 144px;
-  }
-
-  section.inscricoes h1 {
-      padding-bottom: 20px;
-      font-size: 1.9rem;
-  }
-
-  .inscricoes > .interface {
-      max-width: 500px;
-      width: 100%;
-      background: var(--corCinzaClaro);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px 0px #202020;
-  }
-
-  #form-checkout input {
-      font-size: 15px;
-      padding: 9px;
-  }
-
-  #form-checkout button {
-      font-size: 1.05rem;
-      padding: 11px;
-  }
-
-  /* Pagamentos */
-  section.pixBox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto;
-      max-width: 500px;
-  }
-
-  section.pixBox h3 {
-      font-size: 1.9rem;
-  }
-
-  .container {
-      margin: 18px auto;
-      max-width: 500px;
-      width: 100%;
-      background: var(--corCinzaClaro);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px 0px #202020;
-  }
-
-  #pixBox img {
-      width: 180px;
-      margin-bottom: 10px;
-  }
-
-  .text-box {
-      font-size: 15px;
-      padding: 9px;
-  }
-
-  #copiarPixBtn, #confirmarBtn {
-      font-size: 1.05rem;
-      padding: 11px;
-  }
-
   /* Sobre nós */
   .sobre-nos .sobre-nos-txt {
       max-width: 450px;
@@ -214,8 +139,8 @@
       flex-direction: column;
       max-width: 400px;
       margin: auto;
-      padding: 40px 0;
-      padding-top: 144px;
+      padding: 30px 0;
+      padding-top: 30px;
   }
 
   section.inscricoes h1 {
@@ -400,8 +325,8 @@
         flex-direction: column;
         max-width: 330px;
         margin: auto;
-        padding: 40px 0px;
-        padding-top: 144px;
+        padding: 30px 0px;
+        padding-top: 30px;
     }
 
     section.inscricoes h1 {
