@@ -1,0 +1,732 @@
+@charset "UTF-8";
+
+:root {
+    --corBranca: #ffffff;
+    --corLaranja: #FF7903;
+    --cor2: #FF4655;
+    --corCinza: #C0C0C1;
+    --corCinzaClaro: #303030;
+    --corCinzaMedio: #212121;
+    --corCinzaEscuro: #181818;
+
+    --fonte-padrao: 'Roboto', sans-serif;
+    --fonte-destaque: 'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--corCinzaMedio);
+    font-family: var(--fonte-padrao);
+    color: var(--corBranca);
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-destaque);
+    color: var(--corLaranja);
+    font-size: 2.2rem;
+}
+
+.interface {
+    max-width: 1380px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid var(--corBranca);
+    border-radius: 8px;
+    color: var(--corBranca);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: var(--corCinzaClaro);
+    color: var(--corLaranja);
+}
+
+/* Estilo do cabeçalho */
+
+header {
+    background-color: var(--corCinzaEscuro);
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logotipo-cabecalho img{
+    max-width: 70px;
+    border-radius: 50%;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 56px;
+}
+
+header nav.menu-desktop a {
+    color: var(--corBranca);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color .5s;
+}
+
+header nav.menu-desktop a:hover {
+    color: var(--corLaranja);
+}
+
+header nav.menu-desktop button {
+    width: 134px;
+    height: 44px;
+}
+
+/* Estilo do Menu Mobile */
+
+.btn-menu-mobile {
+    display: none;
+}
+
+.btn-menu-mobile i {
+    font-size: 2.8rem;
+    color: var(--corBranca);
+    cursor: pointer;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--corCinzaMedio);
+    text-align: left;
+    padding: 32px 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 64px 0;
+}
+
+.menu-mobile ul li a {
+    color: var(--corBranca);
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 24px;
+    display: block;
+    transition: .5s;
+}
+
+.menu-mobile ul li a:hover {
+    background-color: var(--corCinzaClaro);
+    color: var(--corLaranja);
+}
+
+.menu-mobile .bi-x-lg {
+    font-size: 2rem;
+    color: var(--corBranca);
+    padding: 24px;
+    cursor: pointer;
+}
+
+.menu-mobile.abrir-menu {
+    left: 0;
+    pointer-events: initial;
+}
+
+/* Estilo do Inscrições - H1 */
+
+#inscricoes-h1 {
+    color: var(--corLaranja);
+    text-align: center;
+    padding-top: 144px;
+}
+
+/* Estilo do Inscrições */
+
+section.inscricoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 20px 0px 20px;
+
+}
+
+section.inscricoes h1 {
+    padding-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.inscricoes > .interface {
+    max-width: 500px;
+    width: 100%;
+    background: var(--corCinzaClaro);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px 0px #202020;
+}
+
+#form-checkout {
+    display: flex;
+    flex-direction: column; /* coloca label e input em coluna */
+    gap: 15px; /* espaçamento entre os blocos */
+}
+
+#form-checkout label {
+    color: var(--corCinza);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#form-checkout input {
+    color: var(--corCinzaEscuro);
+    background-color: var(--corBranca);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#form-checkout button {
+    background-color: var(--corCinzaMedio);
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--corBranca);
+    border: 1px solid var(--corCinzaClaro);
+}
+
+#form-checkout button:hover {
+    background-color: var(--corCinzaEscuro);
+    color: var(--corLaranja);
+}
+
+/* Estilo do Inscrições Encerradas */
+
+#inscricoes-encerradas-modal {
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+}
+
+#modal {
+    background:white;
+    padding:30px;
+    max-width:400px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    color: var(--corCinzaEscuro);
+}
+
+#modal h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+#fechar-modal {
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:var(--corCinzaMedio);
+    color:var(--corBranca);
+    cursor:pointer;
+    border-radius:5px;
+}
+
+#fechar-modal:hover {
+    background-color: var(--corCinzaEscuro);
+    color: var(--corLaranja);
+}
+
+/* ESTILO DO FORMULÁRIO */
+
+.all-form {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 4%;
+}
+
+.inscricoes .interface {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px 5px 0px 0px;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    max-width: 800px;
+    min-width: 600px;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* FORMULÁRIO */
+#form-checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espaço entre os campos */
+}
+
+/* BLOCO DE CADA CAMPO */
+#form-checkout label {
+  display: block;
+  font-weight: 600;
+  color: var(--corCinza);
+  margin-bottom: 6px;
+}
+
+#form-checkout input,
+#form-checkout select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: var(--corBranca);
+  color: var(--corCinzaEscuro);
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+/* ANIMAÇÃO QUANDO CLICA NO CAMPO */
+#form-checkout input:focus,
+#form-checkout select:focus {
+  border-color: var(--corLaranja);
+  outline: none;
+}
+
+.campo-termos a {
+color: var(--corBranca);
+}
+
+#form-checkout button {
+  margin-top: 15px;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--corLaranja);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--corBranca);
+}
+
+#form-checkout button:hover {
+  box-shadow: 0px 0px 8px #E56C00;
+}
+
+/* === CAMPOS LADO A LADO === */
+
+#form-checkout .row {
+  display: flex;
+  gap: 20px;
+}
+
+#form-checkout .row .campo {
+  flex: 1;
+}
+
+/* DETALHES PAGAMENTO */
+
+.detalhes-pay {
+    margin-top: 20px;
+    border-radius: 5px 5px 0px 0px;
+    padding: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    background-color: var(--corCinzaClaro);
+    margin-top: 50px;
+}
+
+.detalhes-pay-space {
+    display: flex;
+    min-width: 350px;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.divisor-premium {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+    to right,
+    transparent,
+    rgb(255, 121, 3),
+    transparent
+    );
+    margin: 12px 0; /* Espaçamento acima e abaixo */
+}
+
+/* ===== MODAIS ===== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--corBranca);
+  color: var(--corCinzaEscuro);
+  width: 100%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 12px;
+  position: relative;
+  animation: modalAnim .25s ease;
+}
+
+@keyframes modalAnim {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--corLaranja);
+  border: 0;
+  border-radius: 30px;
+  color: var(--corBranca);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.modal-content button:hover {
+  box-shadow: 0px 0px 8px #E56C00;
+}
+
+/* ============================
+   MODAL - FUNDO ESCURO
+============================ */
+.modal {
+  display: none; /* começa escondido */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* fundo escuro */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ============================
+   CONTEÚDO DO MODAL
+============================ */
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  max-height: 90vh;       /* impede de estourar a tela */
+  overflow-y: auto;       /* scroll interno se o texto for grande */
+}
+
+/* ============================
+   BOTÃO DE FECHAR (X)
+============================ */
+.modal-content .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ============================
+   TÍTULO E PARÁGRAFOS
+============================ */
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  white-space: pre-line; /* preserva espaçamentos e quebras */
+  text-align: justify;
+}
+
+/* ============================
+   BOTÃO INTERNO
+============================ */
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background: var(--corLaranja);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.campo-termos label {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  color: var(--corBranca);
+}
+
+.campo-termos input[type="checkbox"] {
+  max-width: 15px;
+  max-height: 15px;
+  margin: 0;
+}
+
+/* Estilo dos Pagamentos */
+
+section.pixBox {
+  display: none; /* começa escondido */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ✅ quando o JS ativar, volta a ser flex */
+section.pixBox.mostrar {
+  display: flex;
+}
+
+.container {
+  margin: 0 auto;
+  width: 420px;
+  min-width: 420px;
+  background: var(--corBranca);
+  padding: 15px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+section.pixBox h3 {
+    padding-bottom: 10px;
+    font-size: 1rem;
+    color: var(--corCinzaClaro);
+}
+
+#result img {
+  margin: 15px 0;
+  border: 2px solid #eee;
+  border-radius: 10px;
+}
+
+#result p {
+  margin-bottom: 15px;
+}
+
+#result button {
+  margin-top: 15px;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--corLaranja);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--corBranca);
+}
+
+#result button:hover {
+  box-shadow: 0px 0px 8px #E56C00;
+}
+
+#result a {
+  color: var(--corCinzaClaro);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+  font-family: var(--fonte-destaque);
+}
+
+#pix-code {
+  margin-top: 10px;
+}
+
+#pixBox {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pixBox img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
+
+/* Estilo do divisor */
+.divisor {
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(
+    to right,
+    transparent,
+    rgb(255, 121, 3),
+    transparent
+    );
+    margin: 80px auto;
+}
+/* Estilo do Sobre nós */
+
+.sobre-nos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre-nos .sobre-nos-txt {
+    max-width: 700px;
+    padding: 0 0 60px 0;
+}
+
+.sobre-nos p {
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 400px;
+    text-indent: 2rem;
+    padding-top: 24px;
+
+}
+
+.sobre-nos > .interface {
+    max-width: 970px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+     grid-template-areas:
+    "txt1 img1"
+    "img2 txt2"
+    "txt3 img3";
+    gap: 26px;
+    margin: 24px auto;
+    align-items: center;
+}
+
+.txt1 { grid-area: txt1; }
+.img1 { grid-area: img1; }
+.txt2 { grid-area: txt2; }
+.img2 { grid-area: img2; }
+.txt3 { grid-area: txt3; }
+.img3 { grid-area: img3; }
+
+.sobre-nos > .interface img {
+    max-width: 400px;
+}
+
+/* Estilo do Contato */
+
+.contato > .interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contato .txt-contato p {
+    color: var(--corCinza);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.contato .txt-contato p i {
+    color: var(--corAmarela);
+    font-size: 2rem;
+}
+
+.btn-grupo {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.btn-grupo button {
+    width: 268px;
+    height: 60px;
+}
+
+/* Estilo do footer */
+
+footer {
+    padding: 20px 0;
+    background-color: var(--corCinzaEscuro);
+}
+
+footer > .interface {
+    display: flex;
+    justify-content: space-between;
+    color: var(--corBranca);
+}
+
+footer .logo-footer img{
+    max-width: 70px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+footer .btn-redes button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-right: 8px;
+}
