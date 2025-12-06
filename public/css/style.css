@@ -563,7 +563,7 @@ section.pixBox.mostrar {
 section.pixBox h3 {
     padding-bottom: 10px;
     font-size: 1rem;
-    color: var(--corCinzaClaro);
+    color: var(--corCinza);
 }
 
 #result img {
